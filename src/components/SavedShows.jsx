@@ -49,7 +49,7 @@ const SavedShows = () => {
           id={'slider'}
           className='w-full h-full overflow-x-scroll whitespace-nowrap scroll-smooth scrollbar-hide relative'
         >
-          {movies.map((item) => (
+          {movies ? movies.map((item) => (
             <div
               key={item.id}
               className='w-[160px] sm:w-[200px] md:w-[240px] lg:w-[280px] inline-block cursor-pointer relative p-2'
@@ -65,8 +65,8 @@ const SavedShows = () => {
                 </p>
                 <p onClick={() => deleteShow(item.id)} className='absolute text-gray-300 top-4 right-4'><AiOutlineClose /></p>
               </div>
-            </div>
-          ))}
+            </div>)) : <p className='text-white px-4 py-8 font-bold text-sm md:text-xl'>You still don't have movies in favorites</p>
+          }
         </div>
         <MdChevronRight
           onClick={slideRight}
