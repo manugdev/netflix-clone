@@ -46,7 +46,7 @@ const SavedShows = () => {
           size={40}
         />
         <div
-          id='slider'
+          id={'slider'}
           className='w-full h-full overflow-x-scroll whitespace-nowrap scroll-smooth scrollbar-hide relative'
         >
           {movies.map((item) => (
